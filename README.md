@@ -7,3 +7,9 @@
 ◆` npm install -D autoprefixer@10.4.19 postcss@8.4.39 tailwindcss@3.4.3`  & `npm i`설치<br/>
 
 ◆`npx tailwindcss init -p`로 커스터마이징 <br/>
+
+## Redux 중앙관리 도입 <br/>
+
+◆ 제목을 수정하고 요약버튼을 누를때 상태가 변환되고 화면에 도출함 <br/>
+◆ 부모와 자식 컴포넌트를 구분하여 Outlet으로 조정 <br/>
+
