@@ -13,3 +13,8 @@
 ◆ 제목을 수정하고 요약버튼을 누를때 상태가 변환되고 화면에 도출함 <br/>
 ◆ 부모와 자식 컴포넌트를 구분하여 Outlet으로 조정 <br/>
 
+## 노트의 정보 가져오기 <br/>
+◆ useSelector로 redux의 정보를 가지고 오기<br/>
+◆ noteList에 각각의 ID를 도입 <br/>
+◆ noteDetail에서 useParam으로 해당 ID값을 받음 & useDispatch로 action 받아오기<br/>
+

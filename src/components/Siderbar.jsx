@@ -27,21 +27,33 @@ const Siderbar = () => {
           onClick={ handleClick }
         >노트 추가</button>
            
-            <ul className="mt-4">
-                {notes.map((note) => {
-                  <li>
-                         <NavLink 
-                              to={`/notes/${note.id}`} 
-                              className={({ isActive }) => 
-                                isActive 
-                                  ? "text-emerald-300 font-semibold" 
-                                  : "text-gray-300 hover:text-white" 
-                                }>
-                                {note.title}
-                         </NavLink>
-                  </li>
-                })}
-            </ul>
+            <div className="mt-4">
+                <NavLink
+                  to={"/"}
+                  className={({ isActive }) => 
+                    isActive 
+                      ? "text-emerald-300 font-semibold" 
+                      : "text-gray-300 hover:text-white" 
+                    }
+                > 홈
+                </NavLink>
+                <ul className="mt-4">
+                    {notes.map((note) => (
+                      <li key={note.id} className="mb-2">
+                             <NavLink 
+                                  to={`/notes/${note.id}`} 
+                                  className={({ isActive }) => 
+                                    isActive 
+                                      ? "text-emerald-300 font-semibold" 
+                                      : "text-gray-300 hover:text-white" 
+                                    }
+                              >
+                                    {note.title}
+                             </NavLink>
+                      </li>
+                    ))}
+                </ul>
+            </div>
      </div>
   );
 };

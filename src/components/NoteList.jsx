@@ -10,17 +10,26 @@ const NoteList = () => {
             <button className="bg-gray-900 py-2 px-4 rounded">이름 순</button>
         </div>
         <ul>
-            <li>
-                <Link to="/notes/1" className="flex items-center justify-between bg-emerald-700 p-4 rounded-lg mb-2 hover:bg-emerald-600" >
-                    <div>
-                        <h3 className="text-lg font-semibold">새로운 노트</h3>
-                        <p className="text-sm text-gray400">새로운 내용</p>
-                    </div>
-                    <div>
-                        <time className="text-sm text-gray-400">2025</time>
-                    </div>
-                </Link>
-            </li>
+            {
+                notes.map((note) => (
+                    <li key={note.id}>
+                        <Link to={`/notes/${note.id}` }
+                              className="flex items-center justify-between bg-emerald-700 p-4 rounded-lg mb-2 hover:bg-emerald-600" 
+                        >
+                            <div>
+                                <h3 className="text-lg font-semibold">{note.title}</h3>
+                                <p className="text-sm text-gray400">
+                                    {note.content.slice(0, 100)}
+                                </p>
+                            </div>
+                            <div>
+                                <time className="text-sm text-gray-400">{note.time}</time>
+                            </div>
+                        </Link>
+                    </li>
+                ))
+            }
+            
         </ul>
     </div>
   );
